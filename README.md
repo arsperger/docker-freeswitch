@@ -6,7 +6,7 @@ Minimized Freeswitch container build `FROM scratch` using script: `script/make_m
 
 Size of container is ~57MB
 
-Container has pre-built `mod_bcg729` loaded at start-up.
+Container has pre-built `mod_bcg729` [README.md](https://github.com/xadhoom/mod_bcg729/blob/master/README.md) loaded at start-up.
 Minimal Freeswitch configuration with default password changed.
 sngrep installed.
 suitable for various VoIP testing scenarios in docker/compose/swarm environments and microservices

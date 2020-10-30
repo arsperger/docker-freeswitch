@@ -29,4 +29,6 @@ RUN /bin/tar zxvf ./freeswitch_img.tar.gz -C /tmp/build_image
 FROM scratch
 COPY --from=build_freeswitch /tmp/build_image /
 ADD config/freeswitch /etc/freeswitch
+COPY script/run_tests.sh /usr/bin
+HEALTHCHECK --interval=15s --timeout=5s CMD /usr/bin/run_tests.sh
 CMD ["/usr/bin/freeswitch", "-nc", "-nf", "-nonat"]

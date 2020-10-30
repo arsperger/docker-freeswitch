@@ -21,7 +21,7 @@ fs_files_debian() {
     PACKAGES=$(dpkg-query -f '${binary:Package}\n' -W 'freeswitch*')
     NCURSES=$(dpkg-query -f '${binary:Package}\n' -W 'ncurses*')
     PACKAGES="libc6 $PACKAGES"
-    PACKAGES="bash sngrep $PACKAGES $NCURSES"
+    PACKAGES="dash sngrep grep $PACKAGES $NCURSES"
     for pkg in $PACKAGES
     do
         dpkg-query -L $pkg 2> /dev/null

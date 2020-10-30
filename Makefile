@@ -39,8 +39,8 @@ clean: clean-container
 #
 # Usage:
 #       make test
-test: build
-	@docker-compose -f docker-compose.test.yml up -d
+test:
+	@docker-compose -f docker-compose.yml up -d
 
 
 .PHONY: all build test cleanall clean-container
